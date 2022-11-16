@@ -13,5 +13,10 @@ const createNew = async (content) => {
     return response.data
 }
 
+const update = async (object) => {
+    const response = await axios.put(`${baseUrl}/${object.id}`, object)
+    return response.data
+}
+
 // eslint-disable-next-line
-export default { getAll, createNew }
+export default { getAll, createNew, update }
